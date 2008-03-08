@@ -1,5 +1,8 @@
 Revision history for POE-Component-WWW-PastebinCa-Retrieve
 
+0.003   Mar 7, 2008
+        Added more tests
+
 0.002   Mar 7, 2008
         Fixed missing documentation for 'session' argument in retrieve()
 

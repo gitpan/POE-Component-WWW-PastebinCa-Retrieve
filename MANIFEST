@@ -5,8 +5,13 @@ README
 lib/POE/Component/WWW/PastebinCa/Retrieve.pm
 examples/retrieve.pl
 t/00-load.t
+t/01-method-same-session.t
+t/02-method-another-session.t
+t/03-event-same-session.t
+t/04-event-another-session.t
+t/05-errors.t
+t/kwalitee.t
 t/pod-coverage.t
 t/pod.t
-t/kwalitee.t
 Makefile.PL
 META.yml
