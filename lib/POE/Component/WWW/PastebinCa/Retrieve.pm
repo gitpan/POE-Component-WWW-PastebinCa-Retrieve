@@ -3,10 +3,10 @@ package POE::Component::WWW::PastebinCa::Retrieve;
 use warnings;
 use strict;
 
-our $VERSION = '0.003';
+our $VERSION = '0.004';
 
 use Carp;
-use WWW::PastebinCa::Retrieve;
+use WWW::Pastebin::PastebinCa::Retrieve;
 use POE qw( Filter::Reference  Filter::Line  Wheel::Run );
 
 sub spawn {
@@ -218,7 +218,7 @@ sub _wheel {
     my $size = 4096;
     my $filter = POE::Filter::Reference->new;
 
-    my $paster = WWW::PastebinCa::Retrieve->new( %$obj_args );
+    my $paster = WWW::Pastebin::PastebinCa::Retrieve->new( %$obj_args );
 
     while ( sysread STDIN, $raw, $size ) {
         my $requests = $filter->get( [ $raw ] );
@@ -254,7 +254,7 @@ __END__
 
 =head1 NAME
 
-POE::Component::WWW::PastebinCa::Retrieve - non-blocking wrapper around WWW::PastebinCa::Retrieve
+POE::Component::WWW::PastebinCa::Retrieve - non-blocking wrapper around WWW::Pastebin::PastebinCa::Retrieve
 
 =head1 SYNOPSIS
 
@@ -310,7 +310,7 @@ which provides interface to retrieve pastes from L<http://pastebin.ca>
     POE::Component::WWW::PastebinCa::Retrieve->spawn(
         alias => 'paster',
         timeout => 10,
-        # or:  ua => LWP::UserAgent->new( timeout => 10, agent => 'blah),
+        # or:  ua => LWP::UserAgent->new( timeout => 10, agent => 'blah'),
         options => {
             debug => 1,
             trace => 1,
@@ -412,6 +412,9 @@ Takes no arguments. Shuts down the component.
             session => 'other',
         }
     );
+
+Instructs the component to retrieve the paste. Takes a hashref as an
+argument, the possible keys/value of that hashref are as follows:
 
 =head3 event
 

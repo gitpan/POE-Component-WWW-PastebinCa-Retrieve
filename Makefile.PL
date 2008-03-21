@@ -8,10 +8,10 @@ WriteMakefile
           'EXE_FILES' => [],
           'VERSION_FROM' => 'lib/POE/Component/WWW/PastebinCa/Retrieve.pm',
           'PREREQ_PM' => {
-                           'WWW::PastebinCa::Retrieve' => '0.001',
                            'Test::More' => 0,
                            'POE::Wheel::Run' => '1.2222',
                            'POE::Filter::Reference' => '1.222',
+                           'WWW::Pastebin::PastebinCa::Retrieve' => '0.001',
                            'POE::Filter::Line' => '1.2222',
                            'POE' => '0.9999',
                            'Carp' => '1.04'

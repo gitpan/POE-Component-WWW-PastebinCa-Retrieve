@@ -12,7 +12,7 @@ my $builder = Module::Build->new(
     },
     requires => {
         'Carp'                      => 1.04,
-        'WWW::PastebinCa::Retrieve' => 0.001,
+        'WWW::Pastebin::PastebinCa::Retrieve' => 0.001,
         'POE'                       => 0.9999,
         'POE::Filter::Reference'    => 1.2220,
         'POE::Filter::Line'         => 1.2222,

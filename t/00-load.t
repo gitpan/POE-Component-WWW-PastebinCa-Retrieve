@@ -7,7 +7,7 @@ use Test::More tests => 9;
 
 BEGIN {
     use_ok('Carp');
-    use_ok('WWW::PastebinCa::Retrieve');
+    use_ok('WWW::Pastebin::PastebinCa::Retrieve');
     use_ok('POE');
     use_ok('POE::Filter::Reference');
     use_ok('POE::Filter::Line');
